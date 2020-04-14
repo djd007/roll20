@@ -3,6 +3,9 @@ attacks on your sheet they will be numbered as 0, 1, 2.  So on your character
 sheet copy the NPC_Attack#0, NPC_Attack#1, and make a new one for NPC_Attack#3
 editing the paramater to be %selected|repeating_npcaction_$2_npc_action.
 
+Note the macro: ֎CastSpells from Macros_Charsheets.txt also works for NPCs.
+
+
 ---------------------------------------------------------
 
 ⚔NPC_AttackQuery
