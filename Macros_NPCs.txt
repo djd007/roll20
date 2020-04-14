@@ -42,8 +42,9 @@ Attacks:
 👁?NPC_Stats
 /w gm &{template:default} {{name=@{selected|token_name}}} {{Armor Class= @{selected|npc_AC} @{selected|npc_actype}}} {{Hit Dice= @{selected|npc_hpformula}| (@{selected|hp|max}) [[@{selected|npc_hpformula}]]}} {{Speed= @{selected|npc_speed}}} {{Senses=@{selected|npc_senses}}}{{Challenge=@{selected|npc_Challenge}}}
 
+/w gm &{template:default} {{name=@{selected|token_name}}} {{Armor Class= @{selected|npc_AC} @{selected|npc_actype}}} {{Hit Dice= @{selected|npc_hpformula}| (@{selected|hp|max}) [[@{selected|npc_hpformula}]] / [[@{selected|npc_hpformula}]]k>3! }} {{Speed= @{selected|npc_speed}}} {{Senses=@{selected|npc_senses}}}{{Challenge=@{selected|npc_Challenge}}}
+
 ---------------------------------------------------------
 
 👁?NPC_Traits
-/w gm &{template:default} {{name=Traits for @{selected|token_name}}} {{Trait0= @{selected|repeating_npctrait_$0_name}}} {{Description0=@{selected|repeating_npctrait_$0_description}}} {{Trait1=@{selected|repeating_npctrait_$1_name}}} {{Description1=@{selected|repeating_npctrait_$1_description}}}
-{{Trait2=@{selected|repeating_npctrait_$2_name}}} {{Description2=@{selected|repeating_npctrait_$2_description}}}
+/w gm &{template:default} {{name=Traits for @{selected|token_name}}} {{Trait0=@{selected|repeating_npctrait_$0_name}}} {{Description0=@{selected|repeating_npctrait_$0_description}}} {{Trait1=@{selected|repeating_npctrait_$1_name}}} {{Description1=@{selected|repeating_npctrait_$1_description}}}{{Trait2=@{selected|repeating_npctrait_$2_name}}} {{Description2=@{selected|repeating_npctrait_$2_description}}}
