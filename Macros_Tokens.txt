@@ -1,0 +1,78 @@
+-Turn-Complete
+/w GM @{Selected|Token_Name} turn is finished.
+/em @{Selected|Token_Name} pauses to take a deep breath.
+
+---------------------------------------------------------
+
+ωhisper-Token
+/w @{selected|token_name} ?{Message:}
+
+---------------------------------------------------------
+
+⚔NPC_Attack#0
+%{selected|repeating_npcaction_$0_npc_action}
+
+---------------------------------------------------------
+
+֎CastSpells
+@{selected|wtype}&{template:npcaction} {{rname=Spell List}} {{description=
+Cantrips:
+[ @{selected|repeating_spell-cantrip_$0_spellname} ](~selected|repeating_spell-cantrip_$0_spell)
+[ @{selected|repeating_spell-cantrip_$1_spellname} ](~selected|repeating_spell-cantrip_$1_spell)
+[ @{selected|repeating_spell-cantrip_$2_spellname} ](~selected|repeating_spell-cantrip_$2_spell)
+
+1st-level Spells:
+[ @{selected|repeating_spell-1_$0_spellname} ](~selected|repeating_spell-1_$0_spell)
+[ @{selected|repeating_spell-1_$1_spellname} ](~selected|repeating_spell-1_$1_spell)
+
+2nd-level Spells:
+[ @{selected|repeating_spell-2_$0_spellname} ](~selected|repeating_spell-2_$0_spell)
+
+}}
+
+⚔NPC_MultiAttack
+%{selected|repeating_npcaction_$0_npc_action}
+%{selected|repeating_npcaction_$1_npc_action}
+%{selected|repeating_npcaction_$2_npc_action}
+%{selected|repeating_npcaction_$3_npc_action}
+%{selected|repeating_npcaction_$4_npc_action}
+
+---------------------------------------------------------
+
+⚔Roll_Initiative
+/w GM %{selected|initiative}
+/em @{selected|token_name} prepares for battle!
+
+---------------------------------------------------------
+
+⚬Roll_All_Saves
+/w GM &{template:default} {{name=Saving Throws:  @{selected|token_name} 
+}} {{Str Save= [[ 1d20 + [[@{selected|strength_mod} * {1@{selected|npc_str_save}0, 0}=10 + 0@{selected|npc_str_save}]] ]] | [[ 1d20 + [[@{selected|strength_mod} * {1@{selected|npc_str_save}0, 0}=10 + 0@{selected|npc_str_save}]] ]]
+}} {{Dex Save= [[ 1d20 + [[@{selected|dexterity_mod} * {1@{selected|npc_dex_save}0, 0}=10 + 0@{selected|npc_dex_save}]] ]] | [[ 1d20 + [[@{selected|dexterity_mod} * {1@{selected|npc_dex_save}0, 0}=10 + 0@{selected|npc_dex_save}]] ]]
+}} {{Con Save= [[ 1d20 + [[@{selected|constitution_mod} * {1@{selected|npc_con_save}0, 0}=10 + 0@{selected|npc_con_save}]] ]] | [[ 1d20 + [[@{selected|constitution_mod} * {1@{selected|npc_con_save}0, 0}=10 + 0@{selected|npc_con_save}]] ]]
+}} {{Int Save= [[ 1d20 + [[@{selected|intelligence_mod} * {1@{selected|npc_int_save}0, 0}=10 + 0@{selected|npc_int_save}]] ]] | [[ 1d20 + [[@{selected|intelligence_mod} * {1@{selected|npc_int_save}0, 0}=10 + 0@{selected|npc_int_save}]] ]]
+}} {{Wis Save= [[ 1d20 + [[@{selected|wisdom_mod} * {1@{selected|npc_wis_save}0, 0}=10 + 0@{selected|npc_wis_save}]] ]] | [[ 1d20 + [[@{selected|wisdom_mod} * {1@{selected|npc_wis_save}0, 0}=10 + 0@{selected|npc_wis_save}]] ]]
+}} {{Cha Save= [[ 1d20 + [[@{selected|charisma_mod} * {1@{selected|npc_cha_save}0, 0}=10 + 0@{selected|npc_cha_save}]] ]] | [[ 1d20 + [[@{selected|charisma_mod} * {1@{selected|npc_cha_save}0, 0}=10 + 0@{selected|npc_cha_save}]] ]]
+}}
+/em @{selected|token_name} attempts to overcome the attack!
+
+---------------------------------------------------------
+
+👁?Immunity-DR
+/w gm &{template:default} {{name=DR for @{selected|token_name}}} {{Damage Resistance= @{selected|npc_resistances}}} {{Damage Vulnerability= @{selected|npc_vulnerabilities}}} {{Damage Immunity= @{selected|npc_immunities}}} {{Condition Immunity= @{selected|npc_condition_immunities}}}
+
+---------------------------------------------------------
+
+👁?NPC_Stats
+/w gm &{template:default} {{name=@{selected|token_name}}} {{Armor Class= @{selected|npc_AC} @{selected|npc_actype}}} {{Hit Dice= @{selected|npc_hpformula}| (@{selected|hp|max}) [[@{selected|npc_hpformula}]]}} {{Speed= @{selected|npc_speed}}} {{Senses=@{selected|npc_senses}}}{{Challenge=@{selected|npc_Challenge}}}
+
+---------------------------------------------------------
+
+👁?NPC_Traits
+/w gm &{template:default} {{name=Traits for @{selected|token_name}}} {{Trait0= @{selected|repeating_npctrait_$0_name}}} {{Description0=@{selected|repeating_npctrait_$0_description}}} {{Trait1=@{selected|repeating_npctrait_$1_name}}} {{Description1=@{selected|repeating_npctrait_$1_description}}}
+{{Trait2=@{selected|repeating_npctrait_$2_name}}} {{Description2=@{selected|repeating_npctrait_$2_description}}}
+
+---------------------------------------------------------
+
+👁Roll_Perception
+/w gm &{template:default} {{name=Perception: @{selected|token_name}}} {{Passive Perception= @{selected|passive_wisdom}}} {{Perception= [[1d20+@{selected|perception_bonus}]] | [[1d20+@{selected|perception_bonus}]]}}
