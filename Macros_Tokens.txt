@@ -1,6 +1,6 @@
 -Turn-Complete
 /w GM @{Selected|Token_Name} turn is finished.
-/em @{Selected|Token_Name} pauses to take a deep breath.
+/em @{Selected|Token_Name} finishes their turn.
 
 ---------------------------------------------------------
 
@@ -8,8 +8,6 @@
 /w @{selected|token_name} ?{Message:}
 
 ---------------------------------------------------------
-
-
 
 ⚔Roll_Initiative
 /w GM %{selected|initiative}
