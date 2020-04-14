@@ -2,11 +2,17 @@
 /w GM @{Selected|Token_Name} turn is finished.
 /em @{Selected|Token_Name} pauses to take a deep breath.
 
+---------------------------------------------------------
+
 ωhisper-Token
 /w @{selected|token_name} ?{Message:}
 
+---------------------------------------------------------
+
 ⚔NPC_Attack#0
 %{selected|repeating_npcaction_$0_npc_action}
+
+---------------------------------------------------------
 
 ⚔NPC_MultiAttack
 %{selected|repeating_npcaction_$0_npc_action}
@@ -15,9 +21,13 @@
 %{selected|repeating_npcaction_$3_npc_action}
 %{selected|repeating_npcaction_$4_npc_action}
 
+---------------------------------------------------------
+
 ⚔Roll_Initiative
 /w GM %{selected|initiative}
 /em @{selected|token_name} prepares for battle!
+
+---------------------------------------------------------
 
 ⚬Roll_All_Saves
 /w GM &{template:default} {{name=Saving Throws:  @{selected|token_name} 
@@ -30,16 +40,23 @@
 }}
 /em @{selected|token_name} attempts to overcome the attack!
 
+---------------------------------------------------------
+
 👁?Immunity-DR
 /w gm &{template:default} {{name=DR for @{selected|token_name}}} {{Damage Resistance= @{selected|npc_resistances}}} {{Damage Vulnerability= @{selected|npc_vulnerabilities}}} {{Damage Immunity= @{selected|npc_immunities}}} {{Condition Immunity= @{selected|npc_condition_immunities}}}
 
+---------------------------------------------------------
+
 👁?NPC_Stats
 /w gm &{template:default} {{name=@{selected|token_name}}} {{Armor Class= @{selected|npc_AC} @{selected|npc_actype}}} {{Hit Dice= @{selected|npc_hpformula}| (@{selected|hp|max}) [[@{selected|npc_hpformula}]]}} {{Speed= @{selected|npc_speed}}} {{Senses=@{selected|npc_senses}}}{{Challenge=@{selected|npc_Challenge}}}
+
+---------------------------------------------------------
 
 👁?NPC_Traits
 /w gm &{template:default} {{name=Traits for @{selected|token_name}}} {{Trait0= @{selected|repeating_npctrait_$0_name}}} {{Description0=@{selected|repeating_npctrait_$0_description}}} {{Trait1=@{selected|repeating_npctrait_$1_name}}} {{Description1=@{selected|repeating_npctrait_$1_description}}}
 {{Trait2=@{selected|repeating_npctrait_$2_name}}} {{Description2=@{selected|repeating_npctrait_$2_description}}}
 
+---------------------------------------------------------
+
 👁Roll_Perception
 /w gm &{template:default} {{name=Perception: @{selected|token_name}}} {{Passive Perception= @{selected|passive_wisdom}}} {{Perception= [[1d20+@{selected|perception_bonus}]] | [[1d20+@{selected|perception_bonus}]]}}
-
