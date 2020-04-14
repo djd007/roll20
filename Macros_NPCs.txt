@@ -1,0 +1,46 @@
+Roll20 5e character sheets start counting everything at 0 so if you have 3
+attacks on your sheet they will be numbered as 0, 1, 2.  So on your character
+sheet copy the NPC_Attack#0, NPC_Attack#1, and make a new one for NPC_Attack#3
+editing the paramater to be %selected|repeating_npcaction_$2_npc_action.
+
+---------------------------------------------------------
+
+⚔NPC_AttackQuery
+@{selected|wtype}&{template:npcaction} {{rname=Attack List}} {{description=
+Attacks:
+[ @{selected|repeating_npcaction_$0_name} ](~selected|repeating_npcaction_$0_npc_action)
+[ @{selected|repeating_npcaction_$1_name} ](~selected|repeating_npcaction_$1_npc_action)
+[ @{selected|repeating_npcaction_$2_name} ](~selected|repeating_npcaction_$2_npc_action)
+[ @{selected|repeating_npcaction_$3_name} ](~selected|repeating_npcaction_$3_npc_action)
+}}
+
+---------------------------------------------------------
+
+⚔NPC_Attack#0
+%{selected|repeating_npcaction_$0_npc_action}
+
+---------------------------------------------------------
+
+⚔NPC_Attack#1
+%{selected|repeating_npcaction_$1_npc_action}
+
+---------------------------------------------------------
+
+
+⚔NPC_MultiAttack
+%{selected|repeating_npcaction_$0_npc_action}
+%{selected|repeating_npcaction_$1_npc_action}
+%{selected|repeating_npcaction_$2_npc_action}
+%{selected|repeating_npcaction_$3_npc_action}
+%{selected|repeating_npcaction_$4_npc_action}
+
+---------------------------------------------------------
+
+👁?NPC_Stats
+/w gm &{template:default} {{name=@{selected|token_name}}} {{Armor Class= @{selected|npc_AC} @{selected|npc_actype}}} {{Hit Dice= @{selected|npc_hpformula}| (@{selected|hp|max}) [[@{selected|npc_hpformula}]]}} {{Speed= @{selected|npc_speed}}} {{Senses=@{selected|npc_senses}}}{{Challenge=@{selected|npc_Challenge}}}
+
+---------------------------------------------------------
+
+👁?NPC_Traits
+/w gm &{template:default} {{name=Traits for @{selected|token_name}}} {{Trait0= @{selected|repeating_npctrait_$0_name}}} {{Description0=@{selected|repeating_npctrait_$0_description}}} {{Trait1=@{selected|repeating_npctrait_$1_name}}} {{Description1=@{selected|repeating_npctrait_$1_description}}}
+{{Trait2=@{selected|repeating_npctrait_$2_name}}} {{Description2=@{selected|repeating_npctrait_$2_description}}}
