@@ -9,35 +9,7 @@
 
 ---------------------------------------------------------
 
-⚔NPC_Attack#0
-%{selected|repeating_npcaction_$0_npc_action}
 
----------------------------------------------------------
-
-֎CastSpells
-@{selected|wtype}&{template:npcaction} {{rname=Spell List}} {{description=
-Cantrips:
-[ @{selected|repeating_spell-cantrip_$0_spellname} ](~selected|repeating_spell-cantrip_$0_spell)
-[ @{selected|repeating_spell-cantrip_$1_spellname} ](~selected|repeating_spell-cantrip_$1_spell)
-[ @{selected|repeating_spell-cantrip_$2_spellname} ](~selected|repeating_spell-cantrip_$2_spell)
-
-1st-level Spells:
-[ @{selected|repeating_spell-1_$0_spellname} ](~selected|repeating_spell-1_$0_spell)
-[ @{selected|repeating_spell-1_$1_spellname} ](~selected|repeating_spell-1_$1_spell)
-
-2nd-level Spells:
-[ @{selected|repeating_spell-2_$0_spellname} ](~selected|repeating_spell-2_$0_spell)
-
-}}
-
-⚔NPC_MultiAttack
-%{selected|repeating_npcaction_$0_npc_action}
-%{selected|repeating_npcaction_$1_npc_action}
-%{selected|repeating_npcaction_$2_npc_action}
-%{selected|repeating_npcaction_$3_npc_action}
-%{selected|repeating_npcaction_$4_npc_action}
-
----------------------------------------------------------
 
 ⚔Roll_Initiative
 /w GM %{selected|initiative}
@@ -60,17 +32,6 @@ Cantrips:
 
 👁?Immunity-DR
 /w gm &{template:default} {{name=DR for @{selected|token_name}}} {{Damage Resistance= @{selected|npc_resistances}}} {{Damage Vulnerability= @{selected|npc_vulnerabilities}}} {{Damage Immunity= @{selected|npc_immunities}}} {{Condition Immunity= @{selected|npc_condition_immunities}}}
-
----------------------------------------------------------
-
-👁?NPC_Stats
-/w gm &{template:default} {{name=@{selected|token_name}}} {{Armor Class= @{selected|npc_AC} @{selected|npc_actype}}} {{Hit Dice= @{selected|npc_hpformula}| (@{selected|hp|max}) [[@{selected|npc_hpformula}]]}} {{Speed= @{selected|npc_speed}}} {{Senses=@{selected|npc_senses}}}{{Challenge=@{selected|npc_Challenge}}}
-
----------------------------------------------------------
-
-👁?NPC_Traits
-/w gm &{template:default} {{name=Traits for @{selected|token_name}}} {{Trait0= @{selected|repeating_npctrait_$0_name}}} {{Description0=@{selected|repeating_npctrait_$0_description}}} {{Trait1=@{selected|repeating_npctrait_$1_name}}} {{Description1=@{selected|repeating_npctrait_$1_description}}}
-{{Trait2=@{selected|repeating_npctrait_$2_name}}} {{Description2=@{selected|repeating_npctrait_$2_description}}}
 
 ---------------------------------------------------------
 
