@@ -1,10 +1,28 @@
-Roll20 5e character sheets start counting everything at 0 so if you have 3
-attacks on your sheet they will be numbered as 0, 1, 2.  So on your character
-sheet copy the NPC_Attack#0, NPC_Attack#1, and make a new one for NPC_Attack#3
-editing the paramater to be %selected|repeating_npcaction_$2_npc_action.
+###############################################################################
+# Roll20 5e character sheets start counting everything at 0 so if you have 3
+# attacks on your sheet they will be numbered as 0, 1, 2.  So on your character
+# sheet copy the NPC_Attack#0, NPC_Attack#1, and make a new one for NPC_Attack#3
+# editing the paramater to be %selected|repeating_npcaction_$2_npc_action.
+# 
+# Note the macro: ֎CastSpells from Macros_Charsheets.txt also works for NPCs.
+###############################################################################
+---------------------------------------------------------
 
-Note the macro: ֎CastSpells from Macros_Charsheets.txt also works for NPCs.
+֎CastSpells
+@{selected|wtype}&{template:npcaction} {{rname=Spell List}} {{description=
+Cantrips:
+[ @{selected|repeating_spell-cantrip_$0_spellname}&{noerror} ](~selected|repeating_spell-cantrip_$0_spell)&{noerror}
+[ @{selected|repeating_spell-cantrip_$1_spellname}&{noerror} ](~selected|repeating_spell-cantrip_$1_spell)&{noerror}
+[ @{selected|repeating_spell-cantrip_$2_spellname}&{noerror} ](~selected|repeating_spell-cantrip_$2_spell)&{noerror}
 
+1st-level Spells:
+[ @{selected|repeating_spell-1_$0_spellname}&{noerror} ](~selected|repeating_spell-1_$0_spell)&{noerror}
+[ @{selected|repeating_spell-1_$1_spellname}&{noerror} ](~selected|repeating_spell-1_$1_spell)&{noerror}
+
+2nd-level Spells:
+[ @{selected|repeating_spell-2_$0_spellname}&{noerror} ](~selected|repeating_spell-2_$0_spell)&{noerror}
+
+}}
 
 ---------------------------------------------------------
 
