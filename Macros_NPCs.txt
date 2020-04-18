@@ -18,10 +18,22 @@ Cantrips:
 1st-level Spells:
 [ @{selected|repeating_spell-1_$0_spellname}&{noerror} ](~selected|repeating_spell-1_$0_spell)&{noerror}
 [ @{selected|repeating_spell-1_$1_spellname}&{noerror} ](~selected|repeating_spell-1_$1_spell)&{noerror}
+[ @{selected|repeating_spell-1_$2_spellname}&{noerror} ](~selected|repeating_spell-1_$2_spell)&{noerror}
 
 2nd-level Spells:
 [ @{selected|repeating_spell-2_$0_spellname}&{noerror} ](~selected|repeating_spell-2_$0_spell)&{noerror}
+[ @{selected|repeating_spell-2_$1_spellname}&{noerror} ](~selected|repeating_spell-2_$1_spell)&{noerror}
+[ @{selected|repeating_spell-2_$2_spellname}&{noerror} ](~selected|repeating_spell-2_$2_spell)&{noerror}
 
+3rd-level Spells:
+[ @{selected|repeating_spell-3_$0_spellname}&{noerror} ](~selected|repeating_spell-3_$0_spell)&{noerror}
+[ @{selected|repeating_spell-3_$1_spellname}&{noerror} ](~selected|repeating_spell-3_$1_spell)&{noerror}
+[ @{selected|repeating_spell-3_$2_spellname}&{noerror} ](~selected|repeating_spell-3_$2_spell)&{noerror}
+
+4th-level Spells:
+[ @{selected|repeating_spell-4_$0_spellname}&{noerror} ](~selected|repeating_spell-4_$0_spell)&{noerror}
+[ @{selected|repeating_spell-4_$1_spellname}&{noerror} ](~selected|repeating_spell-4_$1_spell)&{noerror}
+[ @{selected|repeating_spell-4_$2_spellname}&{noerror} ](~selected|repeating_spell-4_$2_spell)&{noerror}
 }}
 
 ---------------------------------------------------------
@@ -63,4 +75,4 @@ Attacks:
 ---------------------------------------------------------
 
 👁?NPC_Traits
-/w gm &{template:default} {{name=Traits for @{selected|token_name}}} {{Trait0=@{selected|repeating_npctrait_$0_name}&{noerror}}} {{Description0=@{selected|repeating_npctrait_$0_description}&{noerror}}} {{Trait1=@{selected|repeating_npctrait_$1_name}&{noerror}}} {{Description1=@{selected|repeating_npctrait_$1_description}&{noerror}}}{{Trait2=@{selected|repeating_npctrait_$2_name}&{noerror}}} {{Description2=@{selected|repeating_npctrait_$2_description}&{noerror}}}{{Trait3=@{selected|repeating_npctrait_$3_name}&{noerror}}} {{Description3=@{selected|repeating_npctrait_$3_description}&{noerror}}}
+/w gm &{template:default} {{name=Traits for @{selected|token_name}}} {{@{selected|repeating_npcreaction_$0_name}&{noerror}=@{selected|repeating_npcreaction_$0_description}&{noerror}}} {{@{selected|repeating_npcreaction_$1_name}&{noerror}=@{selected|repeating_npcreaction_$1_description}&{noerror}}} {{@{selected|repeating_npctrait_$0_name}&{noerror}=@{selected|repeating_npctrait_$0_description}&{noerror}}}{{@{selected|repeating_npctrait_$1_name}&{noerror}=@{selected|repeating_npctrait_$1_description}&{noerror}}}{{@{selected|repeating_npctrait_$2_name}&{noerror}=@{selected|repeating_npctrait_$2_description}&{noerror}}}
