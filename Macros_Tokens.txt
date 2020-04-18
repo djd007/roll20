@@ -35,3 +35,8 @@
 
 👁Roll_Perception
 /w gm &{template:default} {{name=Perception: @{selected|token_name}}} {{Passive Perception= @{selected|passive_wisdom}}} {{Perception= [[1d20+@{selected|perception_bonus}]] | [[1d20+@{selected|perception_bonus}]]}}
+
+---------------------------------------------------------
+
+?-MORE-INFORMATION
+&{template:default} {{name=@{selected|token_name}}}  {{[@{selected|bar1}](@{selected|bar1|max})}}
