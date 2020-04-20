@@ -40,3 +40,6 @@
 
 ?-MORE-INFORMATION
 &{template:default} {{name=@{selected|token_name}}}  {{[@{selected|bar1}](@{selected|bar1|max})}}
+
+?-MORE-INFORMATION2
+&{template:default} {{name=@{selected|token_name}}}  {{[@{selected|npc_vulnerabilities}](@{selected|npc_resistances})}}
