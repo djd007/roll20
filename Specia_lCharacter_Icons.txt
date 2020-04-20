@@ -1,7 +1,0 @@
-​⚔	Weapons
-⚚	Healing abilities
-⚝	Magic abilities
-⚬	Miscellaneous abilities with a combat usage
-⚱	Non-combat abilities, like tools
-ω	Whisper
-👁	Search or more information
