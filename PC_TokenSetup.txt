@@ -1,0 +1,19 @@
+!token-mod {{
+--set light_radius|
+--set light_dimradius|
+}}
+!token-mod {{
+--set bar1_link|hp
+--set bar2_link|ac
+--set bar3_link|passive_wisdom
+--set name|@{selected|character_name}
+--on showplayers_name
+--off showplayers_bar1
+--off showplayers_bar2
+--off showplayers_aura1
+--off showplayers_aura2
+--on light_hassight
+--set light_radius|60
+--set light_dimradius|-5
+--off light_otherplayers
+}}
