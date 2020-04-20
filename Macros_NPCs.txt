@@ -8,7 +8,7 @@
 ###############################################################################
 ---------------------------------------------------------
 
-֎CastSpells
+֎CastSpells-Example
 @{selected|wtype}&{template:npcaction} {{rname=Spell List}} {{description=
 Cantrips:
 [ @{selected|repeating_spell-cantrip_$0_spellname}&{noerror} ](~selected|repeating_spell-cantrip_$0_spell)&{noerror}
@@ -38,7 +38,7 @@ Cantrips:
 
 ---------------------------------------------------------
 
-⚔NPC_AttackQuery
+⚔NPC_AttackQuery-Example
 @{selected|wtype}&{template:npcaction} {{rname=Attack List}} {{description=
 Attacks:
 [ @{selected|repeating_npcaction_$0_name}&{noerror} ](~selected|repeating_npcaction_$0_npc_action)&{noerror}
@@ -49,18 +49,18 @@ Attacks:
 
 ---------------------------------------------------------
 
-⚔NPC_Attack#0
+⚔NPC_Attack#0-Example
 %{selected|repeating_npcaction_$0_npc_action}&{noerror}
 
 ---------------------------------------------------------
 
-⚔NPC_Attack#1
+⚔NPC_Attack#1-Example
 %{selected|repeating_npcaction_$1_npc_action}&{noerror}
 
 ---------------------------------------------------------
 
 
-⚔NPC_MultiAttack
+⚔NPC_MultiAttack-Example
 %{selected|repeating_npcaction_$0_npc_action}&{noerror}
 %{selected|repeating_npcaction_$1_npc_action}&{noerror}
 %{selected|repeating_npcaction_$2_npc_action}&{noerror}
@@ -74,5 +74,5 @@ Attacks:
 
 ---------------------------------------------------------
 
-👁?NPC_Traits
+👁?NPC_Traits-Example
 /w gm &{template:default} {{name=Traits for @{selected|token_name}}} {{@{selected|repeating_npcreaction_$0_name}&{noerror}=@{selected|repeating_npcreaction_$0_description}&{noerror}}} {{@{selected|repeating_npcreaction_$1_name}&{noerror}=@{selected|repeating_npcreaction_$1_description}&{noerror}}} {{@{selected|repeating_npctrait_$0_name}&{noerror}=@{selected|repeating_npctrait_$0_description}&{noerror}}}{{@{selected|repeating_npctrait_$1_name}&{noerror}=@{selected|repeating_npctrait_$1_description}&{noerror}}}{{@{selected|repeating_npctrait_$2_name}&{noerror}=@{selected|repeating_npctrait_$2_description}&{noerror}}}
