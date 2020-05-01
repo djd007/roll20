@@ -43,3 +43,43 @@
 
 ?-MORE-INFORMATION2
 &{template:default} {{name=@{selected|token_name}}}  {{[@{selected|npc_vulnerabilities}](@{selected|npc_resistances})}}
+
+---------------------------------------------------------
+
+⚱FX
+/w GM [Clear All](!&#13;!token-mod --set statusmarkers#=dead#-dead) [Condition: Bloodied](!&#13;#⚱Condition_Bloodied) [Condition: Dying](!&#13;#⚱Condition_Dying)[Condition: Dead](!&#13;#⚱Condition_Dead) [Burst Fire](!&#13;/fx burst-fire &#64;{selected|token_id&#125;) [Beam Magic Color](!&#13;/fx beam-magic &#64;{target|token_id&#125; &#64;{selected|token_id&#125;) [Beam Magic Fire](!&#13;/fx beam-fire &#64;{target|token_id&#125; &#64;{selected|token_id&#125;) [Beam Magic Lightning](!&#13;/fx Lightning &#64;{target|token_id&#125; &#64;{selected|token_id&#125;) [Holy Burn](!&#13;/fx burn-holy &#64;{selected|token_id&#125;) [Blood](!&#13;/fx glow-blood &#64;{selected|token_id&#125;) [Blood Critical](!&#13;/fx burst-blood &#64;{selected|token_id&#125;)
+
+---------------------------------------------------------
+
+⚱Condition_Bloodied
+/fx glow-blood @{selected|token_id}
+!condition toggle bloodied
+/desc A spray of blood comes out of @{selected|token_name}.
+
+---------------------------------------------------------
+
+⚱Condition_Dead
+/fx nova-death @{selected|token_id}
+!token-mod --set statusmarkers#=dead
+/emas @{selected|token_name} is slumps over dead.
+
+---------------------------------------------------------
+
+⚱Condition_Dying
+/fx burst-death @{selected|token_id}
+!token-mod --set statusmarkers#=broken-skull
+/emas @{selected|token_name} is unconscious, in a coma, and in danger of dying.
+
+
+---------------------------------------------------------
+
+⚱Setup_Token
+/w GM [Night Vision Only](!&#13;#⚱Light_NightVisionOnly) [Torch Only](!&#13;#⚱Light_Torch) [Torch + Night Vision](!&#13;#⚱Light_TorchNightVis) [Bulls Eye + Night Vision](!&#13;#⚱Light_BullsEyeNightVis) [Create Token Actions](!ta) [Delete Token Actions](!deleteta) [Setup Player Token](!&#13;#⚱PC_TokenSetup) [Setup Monster Token](!&#13;#⚱Monster_TokenSetup)
+
+---------------------------------------------------------
+
+👁Token_Status
+
+!token-mod ?{Status|Concentrating, --set statusmarkers#!blue|Readying, --set statusmarkers#!stopwatch|-, |Blinded, --set statusmarkers#!bleeding-eye --flip light_hassight|Bloodied, --set statusmarkers#!death-zone|Charmed, --set statusmarkers#!broken-heart|Deafened, --set statusmarkers#!edge-crack|Frightened, --set statusmarkers#!screaming|Grappled, --set statusmarkers#!grab|Invisibility, --set statusmarkers#!ninja-mask|Incapacitated,|Luck Point:1, --set statusmarkers#!lucky1| --set statusmarkers#!interdiction|Paralyzed, --set statusmarkers#!pummeled|Petrified, --set statusmarkers#!frozen-orb|Poisoned, --set statusmarkers#!chemical-bolt|Prone, --set statusmarkers#!back-pain|Restrained, --set statusmarkers#!fishing-net|Stunned, --set statusmarkers#!fist|Unconscious, --set statusmarkers#!sleepy|-, |Blessed, --set statusmarkers#!angel-outfit|Raging, --set statusmarkers#!overdrive|Marked, --set statusmarkers#!archery-target|-, |Dead, --set statusmarkers#=dead|-, |Clear Conditions, --set statusmarkers#-bleeding-eye#-broken-heart#-edge-crack#-screaming#-grab#-pummeled#-aura#-death-zone#-chemical-bolt#-back-pain#-fishing-net#-fist#-frozen-orb#-interdiction#-sleepy#-ninja-mask#-dead|Clear All, --set statusmarkers#-bleeding-eye#-broken-heart#-edge-crack#-death-zone#-screaming#-grab#-pummeled#-aura#-chemical-bolt#-back-pain#-fishing-net#-fist#-frozen-orb#-interdiction#-sleepy#-ninja-mask#-angel-outfit#-overdrive#-blue#-stopwatch#-archery-target#-dead}
+
+---------------------------------------------------------
