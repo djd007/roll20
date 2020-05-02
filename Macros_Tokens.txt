@@ -74,7 +74,7 @@
 ---------------------------------------------------------
 
 ⚱Setup_Token
-/w GM [Night Vision Only](!&#13;#⚱Light_NightVisionOnly) [Torch Only](!&#13;#⚱Light_Torch) [Torch + Night Vision](!&#13;#⚱Light_TorchNightVis) [Bulls Eye + Night Vision](!&#13;#⚱Light_BullsEyeNightVis) [Create Token Actions](!ta) [Delete Token Actions](!deleteta) [Setup Player Token](!&#13;#⚱PC_TokenSetup) [Setup Monster Token](!&#13;#⚱Monster_TokenSetup)
+/w GM [Night Vision Only](!&#13;#⚱Light_NightVisionOnly) [Torch Only](!&#13;#⚱Light_Torch) [Torch + Night Vision](!&#13;#⚱Light_TorchNightVis) [Bulls Eye + Night Vision](!&#13;#⚱Light_BullsEyeNightVis) [Create Token Actions](!ta) [Delete Token Actions](!deleteta) [Setup Player Token](!&#13;#⚱PC_TokenSetup) [Setup Monster Token](!&#13;#⚱Monster_TokenSetup) [Size 35](!&#13;!token-mod --set height|[[@{selected|token_size}*35]] width|[[@{selected|token_size}*35]]) [Size 70](!&#13;!token-mod --set height|[[@{selected|token_size}*70]] width|[[@{selected|token_size}*70]]) [Size 140](!&#13;!token-mod --set height|[[@{selected|token_size}*140]] width|[[@{selected|token_size}*140]]) [Size 280](!&#13;!token-mod --set height|[[@{selected|token_size}*280]] width|[[@{selected|token_size}*280]]) [Size 420](!&#13;!token-mod --set height|[[@{selected|token_size}*420]] width|[[@{selected|token_size}*420]])
 
 ---------------------------------------------------------
 
