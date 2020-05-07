@@ -46,3 +46,5 @@ Cantrips:
 
 
 ---------------------------------------------------------
+
+&{template:desc} {{desc= ?{Choose a Potion of...|Healing, **Healing**: [[2d4+2]]|Greater Healing, **Greater Healing**: [[4d4+4]]|Superior Healing, **Superior Healing**: [[8d4+8]]|Supreme Healing, **Supreme Healing**: [[10d4+20]]|Keoghtom's Ointment, **Keoghtom's Ointment**: [[2d8+2]] and cured of poison and any disease} }}
