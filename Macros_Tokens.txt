@@ -47,7 +47,13 @@
 ---------------------------------------------------------
 
 ⚱FX
-/w GM [Clear All](!&#13;!token-mod --set statusmarkers#=dead#-dead) [Condition: Bloodied](!&#13;#⚱Condition_Bloodied) [Condition: Dying](!&#13;#⚱Condition_Dying)[Condition: Dead](!&#13;#⚱Condition_Dead) [Burst Fire](!&#13;/fx burst-fire &#64;{selected|token_id&#125;) [Beam Magic Color](!&#13;/fx beam-magic &#64;{target|token_id&#125; &#64;{selected|token_id&#125;) [Beam Magic Fire](!&#13;/fx beam-fire &#64;{target|token_id&#125; &#64;{selected|token_id&#125;) [Beam Magic Lightning](!&#13;/fx Lightning &#64;{target|token_id&#125; &#64;{selected|token_id&#125;) [Holy Burn](!&#13;/fx burn-holy &#64;{selected|token_id&#125;) [Blood](!&#13;/fx glow-blood &#64;{selected|token_id&#125;) [Blood Critical](!&#13;/fx burst-blood &#64;{selected|token_id&#125;)
+/w GM [Clear All](!&#13;!token-mod --set statusmarkers#=dead#-dead) [Condition: Bloodied](!&#13;#⚱Condition_Bloodied) [Condition: Dying](!&#13;#⚱Condition_Dying)[Condition: Dead](!&#13;#⚱Condition_Dead) [Burst Fire](!&#13;/fx burst-fire &#64;{selected|token_id&#125;) [Beam Magic Color](!&#13;/fx beam-magic &#64;{target|token_id&#125; &#64;{selected|token_id&#125;) [Beam Magic Fire](!&#13;/fx beam-fire &#64;{target|token_id&#125; &#64;{selected|token_id&#125;) [Beam Magic Lightning](!&#13;/fx Lightning &#64;{target|token_id&#125; &#64;{selected|token_id&#125;) [Holy Burn](!&#13;/fx burn-holy &#64;{selected|token_id&#125;) [Blood](!&#13;/fx glow-blood &#64;{selected|token_id&#125;) [Blood Critical](!&#13;/fx burst-blood &#64;{selected|token_id&#125;) [All FX](!&#13; #⚱FX_All)
+
+---------------------------------------------------------
+
+⚱FX_All
+
+/fx ?{Type|Beam,beam|Bomb,bomb|Breath,breath|Bubbling,bubbling|Burn,burn|Burst,burst|Explosion,explode|Glow,glow|Missile,missile|Nova,nova|Spatter,splatter}-?{Color|Acid,acid|Blood,blood|Charm,charm|Death,death|Fire,fire|Frost,frost|Holy,holy|Magic,magic|Slime,slime|Smoke,smoke|Water,water} @{target|Source|token_id} @{target|Destination|token_id}
 
 ---------------------------------------------------------
 
@@ -74,7 +80,21 @@
 ---------------------------------------------------------
 
 ⚱Setup_Token
-/w GM [Night Vision Only](!&#13;#⚱Light_NightVisionOnly) [Torch Only](!&#13;#⚱Light_Torch) [Torch + Night Vision](!&#13;#⚱Light_TorchNightVis) [Bulls Eye + Night Vision](!&#13;#⚱Light_BullsEyeNightVis) [Create Token Actions](!ta) [Delete Token Actions](!deleteta) [Setup Player Token](!&#13;#⚱PC_TokenSetup) [Setup Monster Token](!&#13;#⚱Monster_TokenSetup) [Size 35](!&#13;!token-mod --set height|[[@{selected|token_size}*35]] width|[[@{selected|token_size}*35]]) [Size 70](!&#13;!token-mod --set height|[[@{selected|token_size}*70]] width|[[@{selected|token_size}*70]]) [Size 140](!&#13;!token-mod --set height|[[@{selected|token_size}*140]] width|[[@{selected|token_size}*140]]) [Size 280](!&#13;!token-mod --set height|[[@{selected|token_size}*280]] width|[[@{selected|token_size}*280]]) [Size 420](!&#13;!token-mod --set height|[[@{selected|token_size}*420]] width|[[@{selected|token_size}*420]])
+/w GM [Night Vision Only](!&#13;#⚱Light_NightVisionOnly) [Torch Only](!&#13;#⚱Light_Torch) [Torch + Night Vision](!&#13;#⚱Light_TorchNightVis) [Bulls Eye + Night Vision](!&#13;#⚱Light_BullsEyeNightVis) [Create Token Actions](!ta) [Delete Token Actions](!deleteta) [Setup Player Token](!&#13;#⚱PC_TokenSetup) [Setup Monster Token](!&#13;#⚱Monster_TokenSetup) [Size: Standard 70px](!&#13;!token-mod --set height&#124;70 width&#124;70) [Size: Half](!&#13;!token-mod --set scale|&#42;.5) [Size: One and a Half](!&#13;!token-mod --set scale|&#42;1.5) [Size: Double](!&#13;!token-mod --set scale|&#42;2)
+
+!token-mod ?{Size|Small, --set height#!35}
+!token-mod ?{Size|Small, --set height#!35 width#!35|Med, --set height#!70 width#!70}
+
+/w GM [Size: Standard 70px](!&#13;!token-mod --set height&#124;70 width&#124;70) [Size: Half](!&#13;!token-mod --set scale|&#42;.5) [Size: One and a Half](!&#13;!token-mod --set scale|&#42;1.5) [Size: Double](!&#13;!token-mod --set scale|&#42;2)
+!token-mod --set width|70 height|70
+
+---------------------------------------------------------
+
+⚱Monster_TokenSetup
+!token-mod --set  bar1|
+!token-mod --set  bar1|[[@{selected|npc_hpformula}r<3]] showname|yes bar2_value|@{selected|npc_ac} bar3_value|@{selected|npc_speed} name|"@{selected|npc_name} %%NUMBERED%%"  bar2_max| defaulttoken
+!setattr --sel --wtype --rtype
+/w GM  [Size: Standard 70px](!&#13;!token-mod --set height&#124;70 width&#124;70) [Size: Half](!&#13;!token-mod --set scale|&#42;.5) [Size: One and a Half](!&#13;!token-mod --set scale|&#42;1.5) [Size: Double](!&#13;!token-mod --set scale|&#42;2)
 
 ---------------------------------------------------------
 
