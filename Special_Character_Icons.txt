@@ -5,3 +5,4 @@
 ⚱	Non-combat abilities, like tools
 ω	Whisper
 👁	Search or more information
+⌛	Timer
