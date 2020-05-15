@@ -91,15 +91,41 @@
 ---------------------------------------------------------
 
 ⚱Monster_TokenSetup
-!token-mod --set  bar1|
-!token-mod --set  bar1|[[ceil(@{selected|hp|max}*1.44)]] showname|yes bar2_value|@{selected|npc_ac} bar3_value|@{selected|npc_speed} name|"@{selected|npc_name} %%NUMBERED%%"  bar2_max| defaulttoken
+!token-mod --set  bar1| bar2| bar3| bar1|[[ceil(@{selected|hp|max}*1.44)]] showname|yes bar2_value|@{selected|npc_ac} bar3_value|@{selected|npc_speed} name|"@{selected|npc_name} %%NUMBERED%%"  bar2_max| bar3_max| height|[[@{selected|token_size}*70]] width|[[@{selected|token_size}*70]] defaulttoken
 !setattr --sel --wtype --rtype
-/w GM  [Size: Standard 70px](!&#13;!token-mod --set height&#124;70 width&#124;70) [Size: Half](!&#13;!token-mod --set scale|&#42;.5) [Size: One and a Half](!&#13;!token-mod --set scale|&#42;1.5) [Size: Double](!&#13;!token-mod --set scale|&#42;2)
+/w GM  [Size: Standard 70px](!&#13;!token-mod --set height&#124;70 width&#124;70) [Size: Half](!&#13;!token-mod --set scale|&#42;.5) [Size: One and a Half](!&#13;!token-mod --set scale|&#42;1.5) [Size: Double](!&#13;!token-mod --set scale|&#42;2) [Create Token Actions](!&#13;!ta) [Delete All Macro Abilities and Token Actions](!&#13;!deleteta)
+
+
 
 ---------------------------------------------------------
 
 ⚱Monster_Reroll_HP
 !token-mod --set  bar1|[[{[[ceil(@{selected|npc_hpformula}*1.33)]],[[ceil(@{selected|npc_hpformula}*1.33)]],[[ceil(@{selected|npc_hpformula}*1.33)]]}kh1]]
+
+
+!token-mod --set bar1_value|0
+!token-mod --set bar1_value|+[[ceil((@{selected|hp|max}*1.44)/10)]]
+!token-mod {{
+--ids
+	@{target|1|token_id}
+	@{target|2|token_id}
+	@{target|3|token_id}
+	@{target|4|token_id}
+--set
+	bar1_value|0
+}}
+!token-mod {{
+--ids
+	@{target|1|token_id}
+	@{target|2|token_id}
+	@{target|3|token_id}
+	@{target|4|token_id}
+--set
+	bar1_value|+[[ceil((@{target|1|hp|max}*1.44)/10)]]
+	bar1_value|+[[ceil((@{target|2|hp|max}*1.44)/10)]]
+	bar1_value|+[[ceil((@{target|3|hp|max}*1.44)/10)]]
+	bar1_value|+[[ceil((@{target|4|hp|max}*1.44)/10)]]
+}}
 
 ---------------------------------------------------------
 
