@@ -6,6 +6,8 @@
 --set bar1_link|hp
 --set bar2_link|ac
 --set bar3_link|passive_wisdom
+--set height|[[@{selected|token_size}*70]]
+--set width|[[@{selected|token_size}*70]]
 --set name|@{selected|character_name}
 --on showplayers_name
 --off showplayers_bar1
