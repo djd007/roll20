@@ -1,8 +1,10 @@
 ​⚔	Weapons
 ⚚	Healing abilities
 ⚝	Magic abilities
+֎	Alternate Magic Abilities
 ⚬	Miscellaneous abilities with a combat usage
 ⚱	Non-combat abilities, like tools
 ω	Whisper
 👁	Search or more information
 ⌛	Timer
+⇉   Game Setup / Menus / Token Setup
