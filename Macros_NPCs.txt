@@ -70,7 +70,7 @@ Attacks:
 ---------------------------------------------------------
 
 👁?NPC_Stats
-/w gm &{template:default} {{name=@{selected|token_name}}} {{Armor Class= @{selected|npc_AC} @{selected|npc_actype}}} {{Hit Dice= @{selected|npc_hpformula}|  [[@{selected|npc_hpformula}]], @{selected|hp|max}, [[(ceil((@{selected|hp|max})*1.66))]]}} {{Speed= @{selected|npc_speed}}} {{Senses=@{selected|npc_senses}}}{{Challenge=@{selected|npc_Challenge}}}
+/w gm &{template:default} {{name=@{selected|token_name}}} {{Armor Class= @{selected|npc_AC} @{selected|npc_actype}}} {{Hit Dice= @{selected|npc_hpformula}|  [[@{selected|npc_hpformula}]], @{selected|hp|max}, [[(ceil((@{selected|hp|max})*1.66))]]}} {{Speed= @{selected|npc_speed}}} {{Senses=@{selected|npc_senses}}}{{Challenge=@{selected|npc_Challenge}}} {{XP=@{selected|npc_xp}}} {{Damage Resistance= @{selected|npc_resistances}}} {{Damage Vulnerability= @{selected|npc_vulnerabilities}}} {{Damage Immunity= @{selected|npc_immunities}}} {{Condition Immunity= @{selected|npc_condition_immunities}}}
 
 ---------------------------------------------------------
 
